@@ -21,6 +21,6 @@ head(data)
 Here's 
 
 ```{r}
-head(data.plot)
+data.plot
 ```
 

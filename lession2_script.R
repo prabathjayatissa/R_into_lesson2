@@ -38,5 +38,24 @@ ggsave("figures/boxplot_pets_weight.png",
        height = 4,
        dpi = 300)
 
+data.plot_2 <- ggplot(data, aes(x= country, y= score)) +
+  geom_bar()+
+  theme_bw()+
+  ggtitle("Weight by pet")
+data.plot_2
 
+#Example
+library(tidyverse)
+library(modelr)
+?ggplot
+?`modelr-package`
+View(data)
+View(construction)
 
+ggplot(construction, aes (y =`1 unit`, 
+                          x = Northeast,
+                          colour = Month )) +
+         geom_point (col="Red", 
+                     size =2)
+
+       
