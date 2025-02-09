@@ -53,14 +53,14 @@ View(data)
 View(construction)
 ?construction
 
-construction.plot = ggplot(construction, aes (y =`1 unit`, 
-                          x = Month )) +
-         geom_col (col="Red", 
-                     size =1) +
-      labs(x="North-East", 
-           y="Units",
-           title = "Construction Work On North-East",
-           caption = "Source = https://www.census.gov/construction/nrc/xls/newresconst.xls  ")
+ggplot(construction, aes (y =`1 unit`, 
+                                              x = Month )) +
+                    geom_point (col="Red", 
+                              size =2) +
+                    labs(x="North-East", 
+                         y="Units",
+                        title = "Construction Work On North-East",
+                        caption = "Source = https://www.census.gov/construction/nrc/xls/newresconst.xls  ")
 
 ggsave("figures/Construction_Work_On_North-East.png",
        plot = construction.plot,
@@ -68,19 +68,22 @@ ggsave("figures/Construction_Work_On_North-East.png",
        height = 4,
        dpi = 300)
 
-construction2.plot = ggplot(construction, aes (y =`1 unit`, 
+ggplot(construction, aes (y =`1 unit`, 
                           x = Northeast )) +
   geom_point (col="Red", 
             size =1) +
-  geom_smooth() +
+  geom_smooth(method = "lm") +
   labs(x="North-East", 
        y="Units",
        title = "Construction Work On North-East",
        caption = "Source = https://www.census.gov/construction/nrc/xls/newresconst.xls  ")
 
 ggsave("figures/Regression_Construction_Work_On_North-East.png",
-       plot = construction2.plot,
+       plot = construction3.plot,
        width = 6,
        height = 4,
        dpi = 300)
+
+
+
       
