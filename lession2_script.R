@@ -98,9 +98,14 @@ ggsave("figures/Histogram_Construction_Work_On_North-East.png",
        dpi = 300)
 
 
-ggplot(construction, aes(x=Northeast, y=`1 unit`))+
+ggplot(construction, aes(x=Month, y= Northeast))+
          geom_boxplot(color="black",
                       fill="Light blue",
-                      size=2)
+                      size=20)
 
+ggsave("figures/Boxplot_Construction_Work_On_North-East.png",
+       plot = construction5.plot,
+       width = 6,
+       height = 4,
+       dpi = 300)
        
