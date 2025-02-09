@@ -26,9 +26,13 @@ data.plot
 
 #Pretty the plot
 data.plot <- ggplot(data, aes(x= pet, y= weight, fill = pet)) +
-  geom_boxplot(colours=data.plot )+
-  theme_bw()+
-  ggtitle("Weight by pet")
+  geom_boxplot(colours = data.plot )+
+  theme_minimal()+
+  labs(x="Weight",
+       y="Pets",
+       title = "Weight of the Pets",
+       caption = "Animal Statistics in Europe 2017")
+
 data.plot
 
 #save the plot
@@ -53,14 +57,17 @@ View(data)
 View(construction)
 ?construction
 
-ggplot(construction, aes (y =`1 unit`, 
-                                              x = Month )) +
-                    geom_point (col="Red", 
-                              size =2) +
-                    labs(x="North-East", 
-                         y="Units",
-                        title = "Construction Work On North-East",
-                        caption = "Source = https://www.census.gov/construction/nrc/xls/newresconst.xls  ")
+#Construction Work n North West
+#Scatter Plot
+
+construction.plot= ggplot(construction, aes (y =`1 unit`, 
+                          x = Month )) +
+       geom_point (col="Red", 
+                   size =2) +
+       labs(x="North-East", 
+           y="Units",
+           title = "Construction Work On North-East",
+           caption = "Source = https://www.census.gov/construction/nrc/xls/newresconst.xls  ")
 
 ggsave("figures/Construction_Work_On_North-East.png",
        plot = construction.plot,
@@ -68,7 +75,8 @@ ggsave("figures/Construction_Work_On_North-East.png",
        height = 4,
        dpi = 300)
 
-ggplot(construction, aes (y =`1 unit`, 
+#Scatter Plot
+construction3.plot  = ggplot(construction, aes (y =`1 unit`, 
                           x = Northeast )) +
   geom_point (col="Red", 
             size =1) +
@@ -79,13 +87,13 @@ ggplot(construction, aes (y =`1 unit`,
        title = "Construction Work On North-East",
        caption = "Source = https://www.census.gov/construction/nrc/xls/newresconst.xls  ")
 
-ggsave("figures/Regression_Construction_Work_On_North-East.png",
+construction3.plot = ggsave("figures/Regression_Construction_Work_On_North-East.png",
        plot = construction3.plot,
        width = 6,
        height = 4,
        dpi = 300)
 
-
+#Histogram Plot
 construction4.plot= ggplot (data, aes(x=score),colour = Red) +
   geom_histogram( bins =15) +
                   
@@ -97,15 +105,30 @@ ggsave("figures/Histogram_Construction_Work_On_North-East.png",
        height = 4,
        dpi = 300)
 
-
-ggplot(construction, aes(x=Month, y= Northeast))+
+#BoxPlot
+construction2.plot = ggplot(construction, aes(x=Month, y= Northeast))+
          geom_boxplot(color="black",
                       fill="Light blue",
                       size=20)
 
 ggsave("figures/Boxplot_Construction_Work_On_North-East.png",
-       plot = construction5.plot,
+       plot = construction2.plot,
        width = 6,
        height = 4,
        dpi = 300)
-       
+
+
+# let's start by Installing and loading the required packages
+
+library(cricketdata)
+library(palmerpenguins)
+View(penguins)
+View(cricketdata)
+
+?`cricketdata-package`
+?cricketdata
+
+
+
+
+
