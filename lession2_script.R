@@ -26,13 +26,13 @@ data.plot
 
 #Pretty the plot
 data.plot <- ggplot(data, aes(x= pet, y= weight, fill = pet)) +
-  geom_boxplot()+
+  geom_boxplot(colours=data.plot )+
   theme_bw()+
   ggtitle("Weight by pet")
 data.plot
 
 #save the plot
-ggsave("figures/boxplot_pets_weight.png",
+ggsave("figures/boxplot_pets_weight2.png",
        plot = data.plot,
        width = 6,
        height = 4,
@@ -96,4 +96,11 @@ ggsave("figures/Histogram_Construction_Work_On_North-East.png",
        width = 6,
        height = 4,
        dpi = 300)
-      
+
+
+ggplot(construction, aes(x=Northeast, y=`1 unit`))+
+         geom_boxplot(color="black",
+                      fill="Light blue",
+                      size=2)
+
+       
