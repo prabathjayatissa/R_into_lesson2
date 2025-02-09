@@ -16,7 +16,7 @@ dim(data)
 head(data)
 tail(data)
 xtabs(~pet, data)
-xtabs(~country, data_cats)
+xtabs(~country, data)
 
 ## Make Figures
 #Weight by Pet
@@ -51,11 +51,36 @@ library(modelr)
 ?`modelr-package`
 View(data)
 View(construction)
+?construction
 
-ggplot(construction, aes (y =`1 unit`, 
-                          x = Northeast,
-                          colour = Month )) +
-         geom_point (col="Red", 
-                     size =2)
+construction.plot = ggplot(construction, aes (y =`1 unit`, 
+                          x = Month )) +
+         geom_col (col="Red", 
+                     size =1) +
+      labs(x="North-East", 
+           y="Units",
+           title = "Construction Work On North-East",
+           caption = "Source = https://www.census.gov/construction/nrc/xls/newresconst.xls  ")
 
-       
+ggsave("figures/Construction_Work_On_North-East.png",
+       plot = construction.plot,
+       width = 6,
+       height = 4,
+       dpi = 300)
+
+construction2.plot = ggplot(construction, aes (y =`1 unit`, 
+                          x = Northeast )) +
+  geom_point (col="Red", 
+            size =1) +
+  geom_smooth() +
+  labs(x="North-East", 
+       y="Units",
+       title = "Construction Work On North-East",
+       caption = "Source = https://www.census.gov/construction/nrc/xls/newresconst.xls  ")
+
+ggsave("figures/Regression_Construction_Work_On_North-East.png",
+       plot = construction2.plot,
+       width = 6,
+       height = 4,
+       dpi = 300)
+      
