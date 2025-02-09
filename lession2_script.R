@@ -21,7 +21,7 @@ xtabs(~country, data)
 ## Make Figures
 #Weight by Pet
 data.plot <- ggplot(data, aes(x=pet, y=weight)) +
-  geom_boxplot()
+  geom_boxplot(colours=data.plot)
 data.plot
 
 #Pretty the plot
@@ -86,5 +86,14 @@ ggsave("figures/Regression_Construction_Work_On_North-East.png",
        dpi = 300)
 
 
+construction4.plot= ggplot (data, aes(x=score),colour = Red) +
+  geom_histogram( bins =15) +
+                  
+  geom_freqpoly(bins = 15, colour= "Red")
 
+ggsave("figures/Histogram_Construction_Work_On_North-East.png",
+       plot = construction4.plot,
+       width = 6,
+       height = 4,
+       dpi = 300)
       
