@@ -5,7 +5,8 @@ editor: visual
 ---
 
 ```{r}
-load("lesson2_envionmnet.RData")
+load("lesson2_envionmnet.RData"),
+load("Cricket_Flying.R")
 
 ```
 #Data

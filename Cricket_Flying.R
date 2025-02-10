@@ -17,7 +17,7 @@ cricket1.plot = ggplot(crickets, aes(x=temp,
        title = "Crickets - Temp Vs Rate Plot",
        caption = "Source:McDonald (2009)") +
   scale_color_brewer(palette = "Dark2")
-
+print(cricket1.plot )
 
 ggsave("figures/cricket Temp vs Rate.png",
        plot = cricket1.plot,
