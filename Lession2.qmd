@@ -25,6 +25,9 @@ data.plot
 ```
 # Construction Data of USA in 2018
 
+```{r}
+cricket1.plot
+```
 
 
 

@@ -122,7 +122,8 @@ ggsave("figures/Boxplot_Construction_Work_On_North-East.png",
 
 library(cricketdata)
 library(palmerpenguins)
-View(penguins)
+library(modeldata)
+caView(penguins)
 View(cricketdata)
 
 ?`cricketdata-package`
