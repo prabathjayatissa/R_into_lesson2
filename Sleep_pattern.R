@@ -38,4 +38,10 @@ ggsave("figures/Penguines_Bill_length_vs_Species.png",
        width = 6,
        height = 4,
        dpi = 300)
-       
+
+table_1 = table(penguins$species,
+      penguins$island)
+table_1
+
+write.table(table_1,file = "tables/IslandvsSpecies.txt")
+
