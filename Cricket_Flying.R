@@ -24,3 +24,22 @@ ggsave("figures/cricket Temp vs Rate.png",
        width = 6,
        height = 4,
        dpi = 300)
+
+#install Pacman
+install.packages("pacman")
+require(pacman)
+library(pacman)
+
+library(datasets)
+#load the iris data
+head(iris)
+
+plot(iris$Species)
+plot(iris$Sepal.Length)
+plot(iris$Sepal.Width)
+plot(iris$Petal.Length)
+plot(iris$Petal.Width)
+plot(iris$Sepal.Length,iris$Sepal.Width)
+
+#for all the graphs
+plot(iris)
