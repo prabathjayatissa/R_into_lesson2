@@ -44,4 +44,7 @@ table_1 = table(penguins$species,
 table_1
 
 write.table(table_1,file = "tables/IslandvsSpecies.txt")
-
+library(tidyverse)
+library(tidytuesdayR)
+library(ISLR2)
+?ISLR2

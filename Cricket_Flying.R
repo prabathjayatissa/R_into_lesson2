@@ -39,7 +39,17 @@ plot(iris$Sepal.Length)
 plot(iris$Sepal.Width)
 plot(iris$Petal.Length)
 plot(iris$Petal.Width)
-plot(iris$Sepal.Length,iris$Sepal.Width)
+plot(iris$Sepal.Length,iris$Sepal.Width,
+     col="#cc0000",
+     pch = 19,
+     main = "Iris: Petal Length vs. Petal Width",
+     xlab = "Sepal Legth",
+     ylab = "Sepal Width")
 
 #for all the graphs
-plot(iris)
+plot(cos,0,2*pi)
+plot(exp,1,5)
+plot(dnorm, -3, +3)
+
+
+
