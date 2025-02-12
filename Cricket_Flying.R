@@ -50,6 +50,74 @@ plot(iris$Sepal.Length,iris$Sepal.Width,
 plot(cos,0,2*pi)
 plot(exp,1,5)
 plot(dnorm, -3, +3)
+iris
+?mtcars
+head(mtcars)
+barplot(mtcars$mpg,
+        col = "red",
+        pch =19,
+        main = "MPG Value",
+        xlab = "Number of Vehicals",
+        ylab = "Miles Per Gallon")
 
 
+cylinder <- table(mtcars$cyl)
+barplot(cylinder)
+plot(cylinder)
+
+#Histogram
+hist(iris$Sepal.Length,
+     col = "lightblue",
+     xlab = "Frequncy",
+     ylab = "Sepal Length",
+     main = "Histogrm of Sepal Length")
+
+# To put graphs into 3 raws and 1 column
+par(mfrow = c(3,1))
+
+hist(iris$Petal.Width [iris$Species == "setosa"],
+     xlim = c(0,3),
+     breaks = 9,
+     main = "",
+     xlab ="",
+     col ="lightblue")
+
+hist(iris$Petal.Width [iris$Species == "versicolor"],
+     xlim = c(0,3),
+     breaks =9,
+     main = "",
+     xlab ="",
+     col ="lightblue")
+
+hist(iris$Petal.Width [iris$Species == "virginica"],
+     xlim = c(0,3),
+     breaks =9,
+     main = "",
+     xlab ="",
+     col ="lightblue")
+
+# Back to  original graphical parameters
+par(mfrow = c(3,1))
+par(mfraw = c(2,1))
+
+hist(iris$Petal.Width [iris$Species == "setosa"],
+     xlim = c(0,3),
+     breaks = 9,
+     main = "",
+     xlab ="",
+     col ="lightblue")
+
+hist(iris$Petal.Width [iris$Species == "versicolor"],
+     xlim = c(0,3),
+     breaks =9,
+     main = "",
+     xlab ="",
+     col ="lightblue")
+
+hist(iris$Petal.Width [iris$Species == "virginica"],
+     xlim = c(0,3),
+     breaks =9,
+     main = "",
+     xlab ="",
+     col ="lightblue")
 
