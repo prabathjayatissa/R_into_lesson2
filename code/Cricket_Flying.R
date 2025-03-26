@@ -23,7 +23,7 @@ ggsave("figures/cricket Temp vs Rate.png",
        plot = cricket1.plot,
        width = 6,
        height = 4,
-       dpi = 300)
+       dpi = 300) 
 
 #install Pacman
 install.packages("pacman")
