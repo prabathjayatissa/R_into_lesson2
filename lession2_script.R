@@ -63,7 +63,7 @@ View(construction)
 construction.plot= ggplot(construction, aes (y =`1 unit`, 
                           x = Month )) +
        geom_point (col="Red", 
-                   size =2) +
+                   size =3) +
        labs(x="North-East", 
            y="Units",
            title = "Construction Work On North-East",
