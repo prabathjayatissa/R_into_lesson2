@@ -60,7 +60,6 @@ barplot(mtcars$mpg,
         xlab = "Number of Vehicals",
         ylab = "Miles Per Gallon")
 
-
 cylinder <- table(mtcars$cyl)
 barplot(cylinder)
 plot(cylinder)
