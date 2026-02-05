@@ -17,6 +17,7 @@ data_dogs
 
 # Chart the Dogs weight against the Score - Scatter Plot, Box-Plot, Frequency-Polygon, Histogram
 
+
 ggplot(data_dogs, aes(x=weight, y=score))+
   geom_point(col="Red", size =2)+
   labs(x="Weight of Dogs",
